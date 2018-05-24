@@ -1,4 +1,5 @@
 import speech_recognition as sr
+
 r = sr.Recognizer()
 flg = True
 
@@ -11,5 +12,9 @@ while flg:
 	    	flg = False
 
 text = r.recognize_google(audio, language = 'en-US')
+if(text):
+	flg = 'en'
 text = r.recognize_google(audio, language = 'ja-JP')
-print(text)
+if(text):
+	flg = 'jp'
+print("lang_flg: ", flg, " and what you mentioned is: ", text)

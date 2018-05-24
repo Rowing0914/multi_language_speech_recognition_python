@@ -14,10 +14,14 @@ def identifier():
 		    	flg = False
 		    	print ('Done!')
 		text = r.recognize_google(audio, language = 'en-US')
+		if(text):
+			lang_flg = 'en'
 		text = r.recognize_google(audio, language = 'ja-JP')
-		print(text)
-	return text
+		if(text):
+			lang_flg = 'jp'
+		print("lang_flg: ", lang_flg, " and what you mentioned is: ", text)
+	return text, lang_flg
 
 if __name__ == '__main__':
 	r = sr.Recognizer()
-	app.run(host='0.0.0.0', port=8080)
+	app.run(host='127.0.0.1', port=5000)
