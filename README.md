@@ -11,5 +11,5 @@ This should be compatible for 2.7 or older
 # flask version
 $ python speech_recognition_flask.py
 # console version
-$ python speech_recognition.py
+$ python speech_text.py
 ```
